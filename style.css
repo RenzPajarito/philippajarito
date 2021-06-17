@@ -1,0 +1,267 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+#main {
+	background: #fff;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	user-select: none;
+	z-index: 100;
+}
+
+header .web--title {
+	position: relative;
+	left: 80px;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+header nav ul {
+	display: flex;
+	position: relative;
+	right: 80px;
+}
+
+header nav ul li {
+	list-style: none;
+	margin-left: 15px;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	background: #5effde;
+	padding: 10px 15px;
+	color: #000;
+	border-radius: 25px;
+	transition: all 0.4s ease;
+}
+
+header nav ul li a:hover {
+	background: #86ffe6;
+}
+
+header .humburger {
+	position: absolute;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	outline: none;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+	background: transparent;
+	display: none;
+}
+
+header .humburger .lines {
+	width: 25px;
+	height: 3px;
+	background: #000;
+	display: block;
+	margin-bottom: 3px;
+}
+
+header .close--nav {
+	display: none;
+}
+
+.about--philip {
+	position: relative;
+	top: 150px;
+	left: 80px;
+	width: 550px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+}
+
+.about--philip .profile {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #5effde;
+	border-radius: 50%;
+	background: url(img/philip.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;
+}
+
+.about--philip .profile--name {
+	position: absolute;
+	top: 100px;
+	left: 180px;
+	width: 240px;
+	height: 40px;
+	background: #5effde;
+	border-radius: 0 25px 0 0;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	z-index: 9;
+}
+
+.about--philip .text--box {
+	position: absolute;
+	top: 140px;
+	left: 200px;
+	width: 300px;
+	height: 100px;
+	padding: 10px;
+	word-spacing: 1px;
+	border-right: 5px solid #5effde;
+	z-index: 9;
+}
+
+.about--philip .text--box::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 290px;
+	height: 100px;
+	background: #5effde3b;
+	z-index: 9;
+}
+
+.about--philip .quote {
+	position: absolute;
+	bottom: 5px;
+	left: 55px;
+	padding: 10px 10px;
+	z-index: 9;
+}
+
+.about--philip .quote p {
+	font-size: 20px;
+}
+
+.nurse--image {
+	position: absolute;
+	top: 100px;
+	right: 80px;
+	background: url(img/nursevectorart.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 400px;
+	height: 400px;
+}
+
+@media (max-width: 454px) {
+	header nav {
+		display: none;
+	}
+
+	header nav ul {
+		display: inline-block;
+	}
+
+	header nav ul li {
+		margin-bottom: 30px;
+		position: relative;
+		top: 120px;
+		left: 170px;
+	}
+
+	header .humburger {
+		display: block;
+		right: -130px;
+		top: 35px;
+	}
+
+	header .humburger .lines {
+		height: 5px;
+		width: 35px;
+	}
+
+	header .close--nav {
+		display: none;
+		font-size: 2em;
+		background: red;
+		width: 40px;
+		color: #fff;
+		position: absolute;
+		right: -135px;
+		outline: none;
+		border: none;
+		z-index: 11;
+	}
+
+	.about--philip .profile {
+		width: 300px;
+		height: 300px;
+	}
+
+	.about--philip .profile--name {
+		top: 230px;
+		left: 200px;
+		height: 60px;
+		width: 300px;
+		padding-left: 80px;
+		font-size: 2em;
+	}
+
+	.about--philip .text--box {
+		top: 320px;
+		left: 15px;
+		width: 450px;
+		height: 140px;
+		font-size: 1.5em;
+	}
+
+	.about--philip .text--box::after {
+		height: 140px;
+		width: 450px;
+	}
+
+	.about--philip .quote {
+		top: 470px;
+		left: 15px;
+		font-size: 1.5em;
+	}
+}
+
+@media (max-width: 708px) {
+	header {
+		height: 100px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	header .humburger {
+		display: block;
+	}
+}
+
+@media (max-width: 988px) {
+	.nurse--image {
+		display: none;
+	}
+}
